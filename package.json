@@ -1,0 +1,21 @@
+{
+  "name": "cross-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:modules": "npm run install:react-parent && npm run install:react-child && npm run install:vue-child",
+    "install:react-parent": "cd ./react-parent && cnpm i",
+    "install:react-child": "cd ./react-child && cnpm i",
+    "install:vue-child": "cd ./vue-child && cnpm i",
+    "start": "node ./scripts/start.js",
+    "start:react-parent": "cd ./react-parent && npm run dev",
+    "start:react-child": "cd ./react-child && npm run dev",
+    "start:vue-child": "cd ./vue-child && npm run dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  }
+}
